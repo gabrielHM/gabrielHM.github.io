@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+ import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +6,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  @Input() mediaItem;
+  @Output() delete = new EventEmitter();
   title = 'Gabriel-HM Web';
+  navLinks = [
+    {'label':'ABOUT ME', 'route':'home'},
+    {'label':'RESUME', 'route': 'resume'},
+    {'label':'PORTFOLIO', 'route': 'portfolio'},
+    {'label':'BLOG', 'route': 'blog'},
+    {'label':'CONTACT ME', 'route': 'contactme'}];
+  hTagClick() {
+     console.log("H Tag Clicked! :D");
+    this.delete.emit('prueba');
+  };
 }
