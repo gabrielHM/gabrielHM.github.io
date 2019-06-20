@@ -1,3 +1,101 @@
 <div class="container">
-<mat-card>Hello from Resume!</mat-card>
+  <mat-card>
+    <mat-card-title-group>
+      <img src="http://via.placeholder.com/350/295f48" mat-card-lg-image>
+      <mat-card-title>{{person.name}}</mat-card-title>
+      <mat-card-subtitle>{{person.email}}</mat-card-subtitle>
+
+    </mat-card-title-group>
+  </mat-card>
+  <br/>
+  <mat-card>
+    <mat-card-title-group>
+      <mat-card-title>Objective</mat-card-title>
+    </mat-card-title-group>
+    <mat-card-content> {{objective}}</mat-card-content>
+  </mat-card>
+  <br/>
+  <blockquote class="blockquote text-center">
+    <h2>
+      <i class="material-icons">school</i> Education</h2>
+  </blockquote>
+
+  <mat-card>
+        <mat-card-title-group>
+          <img fxFlexAlign="start" mat-card-sm-image src="https://upload.wikimedia.org/wikipedia/en/thumb/6/65/UPR_at_Mayaguez_Seal.svg/220px-UPR_at_Mayaguez_Seal.svg.png">
+          <mat-card-title>Bachelor’s Degree in Computer Engineering</mat-card-title>
+          <mat-card-subtitle>University of Puerto Rico, Mayaguez Campus</mat-card-subtitle>
+        </mat-card-title-group>
+        <mat-card-content>
+            <p>Expected Graduation Date: Dec 2019</p>
+            <p>Related Courses: Data Structures, Algorithms, Advanced Programming, Data Bases, Programming Languages.</p>
+        </mat-card-content>
+      </mat-card>
+
+  <br/>
+  <blockquote class="blockquote text-center">
+    <h2>
+      <i class="material-icons">tune</i> Skills</h2>
+  </blockquote>
+  <mat-card id="skills_card" fxLayout="row" fxLayoutAlign="space-around start">
+
+    <mat-list fxFlex="30">
+      <h3 matSubheader>Programming</h3>
+      <mat-divider [inset]="true"></mat-divider>
+      <mat-list-item *ngFor="let skill of skills">{{skill.name}}</mat-list-item>
+    </mat-list>
+    <mat-list fxFlex="30">
+      <h3 matSubheader>General</h3>
+      <mat-divider [inset]="true"></mat-divider>
+      <mat-list-item *ngFor="let skill of general">{{skill.name}}</mat-list-item>
+    </mat-list>
+    <mat-list fxFlex="30">
+      <h3 matSubheader>Other</h3>
+      <mat-divider [inset]="true"></mat-divider>
+      <mat-list-item *ngFor="let skill of others">{{skill.name}}</mat-list-item>
+    </mat-list>
+
+  </mat-card>
+  <br/>
+  <blockquote class="blockquote text-center">
+    <h2>
+      <i class="material-icons">work</i> Experience</h2>
+  </blockquote>
+  
+  <br/>
+  <div fxLayout="column" fxLayoutAlign="center center" fxFlexFill>
+        <div *ngFor="let exp of experiences; even as isEven" fxFlexFill>
+          <mat-expansion-panel>
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                {{exp.title}}
+              </mat-panel-title>
+              <!-- <mat-panel-title fxFlexAlign="center"> ({{exp.place}}) </mat-panel-title> -->
+              <mat-panel-description>
+                <span fxFlex></span> {{exp.time}}
+              </mat-panel-description>
+            </mat-expansion-panel-header>
+            <p matSubheader>({{exp.place}})</p>
+            <mat-list dense>
+                    <mat-list-item *ngFor="let item of exp.description"> {{item}} </mat-list-item>
+            </mat-list>
+            <!-- <p>{{exp.description}}</p> -->
+    
+          </mat-expansion-panel>
+          <!-- <div fxLayout="row" *ngIf="isEven" fxFlexAlign="start" fxFlexFill>
+            <h2>{{exp.title}}</h2>
+            <span fxFlex></span>
+            <mat-divider [vertical]="true"></mat-divider>
+            <span fxFlex></span>
+    
+          </div>
+          <div fxLayout="row" *ngIf="!isEven" fxFlexAlign="end">
+            <span fxFlex></span>
+            <mat-divider [vertical]="true"></mat-divider>
+            <span fxFlex></span>
+            <h2>{{exp.title}}</h2>
+          </div> -->
+        </div>
+      </div>
+
 </div>

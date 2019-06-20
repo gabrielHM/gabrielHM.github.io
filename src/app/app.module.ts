@@ -2,6 +2,11 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule, MatCheckboxModule, MatToolbarModule, MatTabsModule, MatCardModule } from '@angular/material';
+import {MatListModule} from '@angular/material/list';
+import {MatDividerModule} from '@angular/material/divider';
+import {MatExpansionModule} from '@angular/material/expansion';
+
+import {FlexLayoutModule} from '@angular/flex-layout';
 import { FormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
@@ -34,7 +39,8 @@ import { routing } from './app.routing';
     NgbModule.forRoot(),
     FormsModule,
     routing,
-    MatButtonModule, MatCheckboxModule, MatToolbarModule, MatTabsModule, MatCardModule
+    FlexLayoutModule,
+    MatButtonModule, MatCheckboxModule, MatToolbarModule, MatTabsModule, MatCardModule, MatListModule, MatDividerModule, MatExpansionModule
   ],
   providers: [
     ExampleService

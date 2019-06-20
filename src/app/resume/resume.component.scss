@@ -1,0 +1,17 @@
+@import '~@angular/material/theming';
+// mat-palette accepts $palette-name, main, lighter and darker variants
+$primary: mat-palette($mat-indigo, 700, 300, 900);
+$accent: mat-palette($mat-light-blue);
+$warn: mat-palette($mat-deep-orange, A200);
+
+.container {
+    margin-top: 1rem;
+}
+// #skills_card{
+//     background-color: mat-color($primary);
+//     color :white;
+// }
+// .mat-list-item{
+//     color :white;
+
+// }
