@@ -13,8 +13,9 @@ export class AppComponent {
     {'label':'ABOUT ME', 'route':'home'},
     {'label':'RESUME', 'route': 'resume'},
     {'label':'PORTFOLIO', 'route': 'portfolio'},
-    {'label':'BLOG', 'route': 'blog'},
-    {'label':'CONTACT ME', 'route': 'contactme'}];
+    // {'label':'BLOG', 'route': 'blog'},
+    // {'label':'CONTACT ME', 'route': 'contactme'}
+  ];
   hTagClick() {
      console.log("H Tag Clicked! :D");
     this.delete.emit('prueba');

@@ -1,0 +1,98 @@
+@import '~@angular/material/theming';
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat-core();
+
+$primaryColor: #1ca570;
+$primaryLightColor: #5cd79f;
+$primaryDarkColor: #007544;
+$secondaryColor: #283d3b;
+$secondaryLightColor: #516865;
+$secondaryDarkColor: #001715;
+$primaryTextColor: #000000;
+$secondaryTextColor: #ffffff;
+$rumbus-light-primary: (
+    50 : #e4f4ee,
+    100 : #bbe4d4,
+    200 : #8ed2b8,
+    300 : #60c09b,
+    400 : #3eb385,
+    500 : #1ca570,
+    600 : #199d68,
+    700 : #14935d,
+    800 : #118a53,
+    900 : #007544,
+    A100 : #a9ffcf,
+    A200 : #76ffb3,
+    A400 : #5cd79f,
+    A700 : #2aff89,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+$rumbus-light-accent: (
+    50 : #e5e8e7,
+    100 : #bfc5c4,
+    200 : #949e9d,
+    300 : #697776,
+    400 : #485a58,
+    500 : #283d3b,
+    600 : #243735,
+    700 : #1e2f2d,
+    800 : #182726,
+    900 : #0f1a19,
+    A100: #324c4a,
+    A200: #283d3b,
+    A400: #1e2e2c,
+    A700: #5a8a85,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #ffffff,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #ffffff,
+        A200 : #ffffff,
+        A400 : #ffffff,
+        A700 : #ffffff,
+    )
+);
+
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker hue.
+$rumbus-light-app-primary: mat-palette($rumbus-light-primary, 500, A400, 900);
+$rumbus-light-app-accent:  mat-palette($rumbus-light-accent);
+$rumbus-light-app-accent_alt:  mat-palette($mat-purple);
+// The warn palette is optional (defaults to red).
+$rumbus-light-app-warn:    mat-palette($mat-red);
+
+// Create the theme object (a Sass map containing all of the palettes).
+$rumbus-light-app-theme: mat-light-theme($rumbus-light-app-primary, $rumbus-light-app-accent_alt, $rumbus-light-app-warn);
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include angular-material-theme($rumbus-light-app-theme);
