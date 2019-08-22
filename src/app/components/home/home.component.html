@@ -1,19 +1,30 @@
     <!-- Header - set the background image for the header in the line below -->
     <header class="py-5 bg-image-full" style="background-image: url('assets/background_low4.jpg');">
       <div fxLayout="row" fxLayoutAlign="center center">
-      <img class="img-fluid d-block mx-auto rounded-circle z4"  fxFlex="15" src="https://avatars2.githubusercontent.com/u/7231616?s=460&v=4" alt="profile picture">
+      <img class="img-fluid d-block mx-auto rounded-circle mat-elevation-z8"  fxFlex="15" fxFlex.lt-md="25" fxFlex.xs="32" src="https://avatars2.githubusercontent.com/u/7231616?s=460&v=4" alt="profile picture">
       </div>
     </header>
 
     <!-- Content section -->
     <!-- <section class="py-5" [mediaItem="object"]> -->
     <section class="py-5">
-      <div class="container text-center">
+      <div class="container text-center" fxLayout="column">
         <h1>Gabriel Huertas Marrero</h1>
         <p class="lead">Computer Science and Engineering Undergrad Student</p>
         <p>University of Puerto Rico at Mayaguez</p>
-        <p><a href="https://gitlab.com/gabrielHM" target="_blank">GitLab</a>, <a href="https://github.com/gabrielHM" target="_blank">Github</a>, <a href="https://www.linkedin.com/in/gabrielhuertasmarrero" target="_blank">LinkedIn</a>
-        </p>
+        
+        
+            <div class="text-center" fxLayout="row" fxLayoutAlign="center end" fxLayoutGap="16px">
+              <div fxLayout="column" fxLayoutAlign="center center">
+                  <a href="https://github.com/gabrielHM" target="_blank"><img src="assets/GitHub_logo.png" class="img-responsive" style="width: 32px;"></a>
+                  <a href="https://github.com/gabrielHM" target="_blank">GitHub</a>
+              </div>
+              <div fxLayout="column" fxLayoutAlign="center center">
+                  <a href="https://www.linkedin.com/in/gabrielhuertasmarrero" target="_blank"><img src="assets/LI-In-Bug.png" class="img-responsive" style="width: 32px;"></a>
+                  <a href="https://www.linkedin.com/in/gabrielhuertasmarrero" target="_blank">LinkedIn</a>
+              </div>
+            </div>
+        
         <p><a href="mailto:contact@gabrielhm.me">contact@gabrielhm.me</a></p>
       </div>
 

@@ -11,8 +11,8 @@ export class AppComponent {
   title = 'Gabriel-HM Web';
   navLinks = [
     {'label':'ABOUT ME', 'route':'home'},
-    {'label':'RESUME', 'route': 'resume'},
-    {'label':'PORTFOLIO', 'route': 'portfolio'},
+    // {'label':'RESUME', 'route': 'resume'},
+    // {'label':'PORTFOLIO', 'route': 'portfolio'},
     // {'label':'BLOG', 'route': 'blog'},
     // {'label':'CONTACT ME', 'route': 'contactme'}
   ];
